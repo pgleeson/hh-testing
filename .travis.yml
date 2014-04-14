@@ -7,3 +7,4 @@ env:
 script: 
   - cd ost
   - python parseOST.py hh.nrn.ost
+  - ls /tmp
