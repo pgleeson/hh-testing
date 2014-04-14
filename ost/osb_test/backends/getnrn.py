@@ -7,7 +7,7 @@ from utils.wdir import working_dir
 
 
 def install_neuron():
-    nrnpath = os.getenv['HOME']
+    nrnpath = os.path.join(os.environ['HOME'],'neuron')
     os.mkdir(nrnpath)
     with working_dir(nrnpath):
         print co(['hg', 'clone', 'http://www.neuron.yale.edu/hg/neuron/nrn'])
