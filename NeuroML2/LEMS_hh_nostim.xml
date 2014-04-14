@@ -1,0 +1,28 @@
+<Lems>
+
+  <!-- Simple cell with classical HH Sodium, Potassium -->
+
+  <Target component="sim1"/>
+
+  <Include file="Cells.xml"/>
+  <Include file="Networks.xml"/>
+  <Include file="Simulation.xml"/>
+
+  
+  <Include file="hh_nostim.nml"/>
+
+  <!-- Simulation specifications -->
+  <Simulation id="sim1" length="500ms" step="0.005ms" target="net1">
+
+    <Display id="d1" title="Membrane Potential (mV)" timeScale="1ms" xmin="0" xmax="50" ymin="-80" ymax="40">
+      <Line id="V" quantity="pop/0/hh/v" scale="1mV"  color="#ffffff" timeScale="1ms"/>
+    </Display>
+
+    <OutputFile id="of0" fileName="/tmp/lems_hh_nostim.dat">
+      <OutputColumn id="v" quantity="pop/0/hh/v" scale="1mV"/>
+    </OutputFile>
+    
+  </Simulation>
+
+
+</Lems>

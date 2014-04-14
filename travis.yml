@@ -1,0 +1,9 @@
+language: python
+python: 2.7
+
+env:
+  - PYTHONPATH=$PYTHONPATH:$HOME/local/lib/python/site-packages PATH=$PATH:$HOME/neuron/nrn/`arch`/bin:$HOME/jNeuroMLJar JNML_HOME=$HOME/jNeuroMLJar
+
+script: 
+  - cd ost
+  - python parseOST.py hh.nrn.ost

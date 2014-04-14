@@ -1,0 +1,40 @@
+create soma
+insert hh
+
+objref stim
+soma stim = new IClamp(0.5) 
+stim.del = 1    
+stim.dur = 500  
+stim.amp = 61   
+
+
+dt = 0.05    
+tstop = 500  
+finitialize(-65)  
+
+cvode_active(1)
+
+objref tvec, vvec, mvec
+tvec = new Vector()
+vvec = new Vector()
+mvec = new Vector()
+vvec.record(&soma.v(0.5))
+mvec.record(&soma.m_hh(0.5))
+tvec.record(&t)
+
+run()
+
+objref TV
+TV = new Matrix()
+TV.resize(tvec.size(),3)
+TV.setcol(0, tvec)
+TV.setcol(1, vvec)
+TV.setcol(2, mvec)
+
+objref dump
+dump = new File()
+dump.wopen("/tmp/nrn_hh.dat")
+
+TV.fprint(dump, " %g")		  
+
+dump.close()

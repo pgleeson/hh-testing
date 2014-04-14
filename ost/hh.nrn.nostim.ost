@@ -1,0 +1,15 @@
+target: ../NEURON/hh_nostim.hoc
+engine: NEURON
+implements:
+  mep: hh.mep
+  experiment: experiment 2, autonomous activity
+  observables:
+    resting:
+      file:
+        path: /tmp/nrn_hh_nostim.dat
+        columns: [0,1]
+        average last: 100
+      tolerance: 1e-2
+    morphology:
+        base section: soma
+    temperature: ~
