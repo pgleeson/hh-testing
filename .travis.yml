@@ -2,9 +2,15 @@ language: python
 python: 2.7
 
 env:
-  - PYTHONPATH=$PYTHONPATH:$HOME/local/lib/python/site-packages PATH=$PATH:$HOME/neuron/nrn/`arch`/bin:$HOME/jNeuroMLJar JNML_HOME=$HOME/jNeuroMLJar
+  global:
+    - PYTHONPATH=$PYTHONPATH:$HOME/local/lib/python/site-packages PATH=$PATH:$HOME/neuron/nrn/`arch`/bin:$HOME/jNeuroMLJar JNML_HOME=$HOME/jNeuroMLJar
+  matrix:
+    - OST_ENGINE=lems
+    - OST_ENGINE=neuron
+matrix:
+  allow_failure: #need to implement unit checking...
+    - env: OST_ENGINE=lems
 
-script: 
-  - cd ost
-  - python parseOST.py hh.nrn.ost
-  - ls /tmp
+script:
+  - cd ost/
+  - nosetests 
