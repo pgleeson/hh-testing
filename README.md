@@ -1,4 +1,4 @@
-hh-testing : Sample OSB model with automated testing!
+hh-testing : Sample OSB project with automated testing!
 =====================================================
 
 [![Build Status](https://travis-ci.org/borismarin/hh-testing.svg)](https://travis-ci.org/borismarin/hh-testing)
