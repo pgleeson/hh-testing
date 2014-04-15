@@ -22,19 +22,3 @@ def install_neuron():
         os.chdir('src/nrnpython')
         run_setup('./setup.py', ['install'])
 
-       
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
-

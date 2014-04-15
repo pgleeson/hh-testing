@@ -9,7 +9,8 @@ class NeuronBackend(object):
 
     def __init__(self, target):
         try:
-            sp.check_call(['nrniv', '--version'])
+            FNULL = open(os.devnull, 'w')
+            sp.check_call(['nrniv', '--version'], stdout=FNULL)
         except OSError:
             import getnrn
             inform('Will fetch and install the latest NEURON version', indent=2)
