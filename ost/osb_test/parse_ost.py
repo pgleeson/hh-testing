@@ -1,24 +1,27 @@
 import yaml
-from osb_test.backends import OSTBackends
-from osb_test.analyzers import OSTAnalyzers
+from backends import OSTBackends
+from analyzers import OSTAnalyzers
+from common.output import inform
 
-def parse_yaml(fname):
+def load_yaml(fname):
     with open(fname) as f:
         y = yaml.safe_load(f)
     return y
 
 
 def parse_ost(ost_path):
-    ost = parse_yaml(ost_path)
+    ost = load_yaml(ost_path)
     engine = ost['engine']
     target = ost['target']
     impl = ost.get('implements')
-    
+
+    inform('Running tests defined in:', ost_path)
+
     tests = []
     if impl:
         mepfile = impl['mep']
         observables = impl['observables']
-        mep = parse_yaml(mepfile) 
+        mep = load_yaml(mepfile) 
         experiment = mep['experiments'][impl['experiment']]
     else:
         observables = {'dry':None} 
