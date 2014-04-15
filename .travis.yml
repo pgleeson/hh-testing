@@ -3,12 +3,12 @@ python: 2.7
 
 env:
   global:
-    - PYTHONPATH=$PYTHONPATH:$HOME/local/lib/python/site-packages PATH=$PATH:$HOME/neuron/nrn/`arch`/bin:$HOME/jNeuroMLJar JNML_HOME=$HOME/jNeuroMLJar
+    - PYTHONPATH=$PYTHONPATH:$HOME/local/lib/python/site-packages PATH=$PATH:$HOME/neuron/nrn/`arch`/bin:$HOME/jnml/jNeuroMLJar JNML_HOME=$HOME/jnml/jNeuroMLJar
   matrix:
     - OST_ENGINE=lems
     - OST_ENGINE=neuron
 matrix:
-  allow_failure: #need to implement unit checking...
+  allow_failures: #need to implement unit checking...
     - env: OST_ENGINE=lems
 
 script:
