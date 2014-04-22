@@ -10,9 +10,11 @@ env:
 matrix:
   allow_failures: #need to implement unit checking...
     - env: OST_ENGINE=lems
-
-install: "pip install git+https://github.com/borismarin/osb-model-validation.git"
+	
+install: 
+    - pip install ez_setup
+    - pip install git+https://github.com/borismarin/osb-model-validation.git"
 
 script:
-  - cd ost/
-  - omv_alltests
+    - cd ost/
+    - omv_alltests
