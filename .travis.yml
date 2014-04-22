@@ -13,7 +13,7 @@ matrix:
 
 install: 
     - pip install ez_setup
-    - pip install git+https://github.com/borismarin/osb-model-validation.git"
+    - pip install git+https://github.com/borismarin/osb-model-validation.git
 
 script:
     - cd ost/
