@@ -8,6 +8,7 @@ implements:
       file: 
         path: /tmp/lems_hh.dat
         columns: [0,1]
+        scaling: [1, 1000]
       spike detection: 
         method: threshold
         threshold: 0
