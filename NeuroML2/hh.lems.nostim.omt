@@ -8,5 +8,5 @@ implements:
       file:
         path: /tmp/lems_hh_nostim.dat
         columns: [0,1]
-        average last: 100
+      average last: 100
       tolerance: 1e-2
