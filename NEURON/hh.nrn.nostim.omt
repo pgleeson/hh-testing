@@ -8,8 +8,20 @@ implements:
       file:
         path: /tmp/nrn_hh_nostim.dat
         columns: [0,1]
+        header: 1
       average last: 100
       tolerance: 1e-2
     morphology:
-        base section: soma
-    temperature: ~
+      base section: soma
+
+    temperature: ~ #tilde needed, sorry
+
+    activation variables: #will check if x is in [0,1]
+      file:
+        path: /tmp/nrn_hh_nostim.dat
+        columns: [0, 2, 3, 4]#time, act var 0, ..., act var n
+        header: 1
+      names: ['m_Na', 'h_Na', 'n_K']#should that come from the mep file?
+      
+
+      

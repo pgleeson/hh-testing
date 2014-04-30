@@ -15,22 +15,29 @@ finitialize(-65)
 
 cvode_active(1)
 
-objref tvec, vvec, mvec
+objref tvec, vvec, mvec, hvec, nvec
 tvec = new Vector()
 vvec = new Vector()
 mvec = new Vector()
+nvec = new Vector()
+hvec = new Vector()
 vvec.record(&soma.v(0.5))
 mvec.record(&soma.m_hh(0.5))
+hvec.record(&soma.h_hh(0.5))
+nvec.record(&soma.n_hh(0.5))
 tvec.record(&t)
 
 run()
 
 objref TV
 TV = new Matrix()
-TV.resize(tvec.size(),3)
+TV.resize(tvec.size(),5)
 TV.setcol(0, tvec)
 TV.setcol(1, vvec)
 TV.setcol(2, mvec)
+TV.setcol(3, hvec)
+TV.setcol(4, nvec)
+
 
 objref dump
 dump = new File()
