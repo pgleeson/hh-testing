@@ -1,5 +1,5 @@
 target: LEMS_hh_nostim.xml
-engine: LEMS
+engine: jNeuroML
 implements:
   mep: ../hh.mep
   experiment: experiment 2, autonomous activity

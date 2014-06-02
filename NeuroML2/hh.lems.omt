@@ -1,5 +1,5 @@
 target: LEMS_hh.xml
-engine: LEMS
+engine: jNeuroML
 implements:
   mep: ../hh.mep
   experiment: experiment 1, plain old current clamp

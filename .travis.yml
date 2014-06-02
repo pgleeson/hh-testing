@@ -1,15 +1,12 @@
 language: python
 python: 2.7
-
 env:
-  global:
-    - PYTHONPATH=$PYTHONPATH:$HOME/local/lib/python/site-packages PATH=$PATH:$HOME/neuron/nrn/`arch`/bin:$HOME/jnml/jNeuroMLJar JNML_HOME=$HOME/jnml/jNeuroMLJar
+  global: PYTHONPATH=$PYTHONPATH:$HOME/local/lib/python/site-packages JNML_HOME=$HOME/jnml/jNeuroMLJar
+    PATH=$PATH:$HOME/jnml/jNeuroMLJar:$HOME/neuron/nrn/`arch`/bin
   matrix:
-    - OST_ENGINE=lems
-    - OST_ENGINE=neuron
-
-install: 
-    - pip install git+https://github.com/borismarin/osb-model-validation.git
-
+  - OST_ENGINE=jNeuroML
+  - OST_ENGINE=NEURON
+install:
+- pip install git+https://github.com/borismarin/osb-model-validation.git
 script:
-    - omv_alltests
+- omv all
