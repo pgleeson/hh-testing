@@ -13,7 +13,7 @@ dt = 0.05
 tstop = 1000  
 finitialize(-65)  
 
-cvode_active(1)
+cvode_active(0)
 
 objref tvec, vvec, mvec, hvec, nvec
 tvec = new Vector()
