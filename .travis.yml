@@ -4,6 +4,6 @@ env:
 - OMV_ENGINE=jNeuroML
 - OMV_ENGINE=NEURON
 install:
-- pip install git+https://github.com/borismarin/osb-model-validation.git
+- pip install git+https://github.com/borismarin/osb-model-validation.git@backend_class
 script:
 - omv all
