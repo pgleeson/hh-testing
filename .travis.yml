@@ -1,10 +1,9 @@
 language: python
 python: 2.7
 env:
-  matrix:
-  - OST_ENGINE=jNeuroML
-  - OST_ENGINE=NEURON
+- OMV_ENGINE=jNeuroML
+- OMV_ENGINE=NEURON
 install:
-- pip install git+https://github.com/borismarin/osb-model-validation.git@backend_class
+- pip install git+https://github.com/borismarin/osb-model-validation.git
 script:
 - omv all
