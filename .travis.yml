@@ -1,8 +1,6 @@
 language: python
 python: 2.7
 env:
-  global: PYTHONPATH=$PYTHONPATH:$HOME/local/lib/python/site-packages JNML_HOME=$HOME/jnml/jNeuroMLJar
-    PATH=$PATH:$HOME/jnml/jNeuroMLJar:$HOME/neuron/nrn/`arch`/bin
   matrix:
   - OST_ENGINE=jNeuroML
   - OST_ENGINE=NEURON
