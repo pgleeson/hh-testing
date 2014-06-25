@@ -7,4 +7,4 @@ Each one of the simulators is downloaded and built in a travis worker, and tests
 
 
 -------------------------------------------------------------------------------------------------------------------------------------
-OSB Model Validation: [![Build Status](https://travis-ci.org/borismarin/hh-testing.svg)](https://travis-ci.org/borismarin/hh-testing)
+OSB Model Validation: [![Build Status](https://travis-ci.org/pgleeson/hh-testing.svg)](https://travis-ci.org/pgleeson/hh-testing)
