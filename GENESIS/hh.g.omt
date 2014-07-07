@@ -1,0 +1,20 @@
+target: hh.g
+engine: genesis
+implements:
+  mep: ../hh.mep
+  experiment: experiment 1, plain old current clamp
+  observables:
+    spike times:
+      file:
+        path: /tmp/hh.gen.dat
+        columns: [0,1]
+        header: 2
+      spike detection:
+        method: threshold
+        threshold: 0
+      tolerance: 1
+  
+
+
+      
+      
