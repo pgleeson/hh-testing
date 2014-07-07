@@ -3,6 +3,7 @@ python: 2.7
 env:
 - OMV_ENGINE=jNeuroML
 - OMV_ENGINE=NEURON
+- OMV_ENGINE=genesis
 install:
 - pip install git+https://github.com/borismarin/osb-model-validation.git@genesis
 script:
