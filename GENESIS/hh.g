@@ -58,4 +58,3 @@ reset
 
 step {tmax} -time
 
-quit
