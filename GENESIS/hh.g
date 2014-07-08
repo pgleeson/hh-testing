@@ -2,6 +2,8 @@
 include ./hhchan.g
 float   PI = 3.1415926
 
+float celsius = 6.3
+
 float tmax = 0.5		
 float dt = 5e-5		
 setclock 0 {dt}		
@@ -25,8 +27,11 @@ setfield /cell/soma Em {Eleak}
 setfield /cell/soma Rm 	{RM/area}
 setfield /cell/soma Cm 	{CM*area}  
 setfield /cell/soma Ra  {RA*soma_l/xarea}
+setfield /cell/soma len {soma_l}
+setfield /cell/soma dia {soma_d}
 setfield /cell/soma initVm {-0.065} 
 setfield /cell/soma inject 0.0
+
 
 pushe /cell/soma
 make_Na_squid_hh
