@@ -5,6 +5,6 @@ env:
 - OMV_ENGINE=NEURON
 - OMV_ENGINE=genesis
 install:
-- pip install git+https://github.com/borismarin/osb-model-validation.git@genesis
+- pip install git+https://github.com/borismarin/osb-model-validation.git
 script:
 - omv all
