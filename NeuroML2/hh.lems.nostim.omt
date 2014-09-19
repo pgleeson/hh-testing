@@ -1,13 +1,13 @@
 target: LEMS_hh_nostim.xml
 engine: jNeuroML
-implements:
-  mep: ../hh.mep
-  experiment: experiment 2, autonomous activity
-  observables:
-    resting:
-      file:
-        path: /tmp/lems_hh_nostim.dat
-        columns: [0,1]
-        scaling: [1, 1000]
-      average last: 100
-      tolerance: 1e-2
+mep: ../hh.mep
+experiments:
+  experiment 2, autonomous activity:
+    observables:
+      resting:
+        file:
+          path: /tmp/lems_hh_nostim.dat
+          columns: [0,1]
+          scaling: [1, 1000]
+        average last: 100
+        tolerance: 1e-2

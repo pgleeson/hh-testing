@@ -1,28 +1,28 @@
 target: hh_nostim.g
 engine: genesis
-implements:
-  mep: ../hh.mep
-  experiment: experiment 2, autonomous activity
-  observables:
-    resting:
-      file:
-        path: /tmp/hh_nostim.gen.dat
-        columns: [0,1]
-        header: 1
-        scaling: [1, 1000]
-      average last: 100
-      tolerance: 1e-2
-    morphology:
-      base section: /cell
-      scaling: 1e12
-    temperature: ~ #tilde needed, sorry
+mep: ../hh.mep
+experiments:
+  experiment 2, autonomous activity:
+    observables:
+      resting:
+        file:
+          path: /tmp/hh_nostim.gen.dat
+          columns: [0,1]
+          header: 1
+          scaling: [1, 1000]
+        average last: 100
+        tolerance: 1e-2
+      morphology:
+        base section: /cell
+        scaling: 1e12
+      temperature: ~ #tilde needed, sorry
 
-    activation variables: #will check if x is in [0,1]
-      file:
-        path: /tmp/hh_nostim.gen.dat
-        columns: [0, 2, 3, 4]#time, act var 0, ..., act var n
-        header: 1
-      names: ['m_Na', 'h_Na', 'n_K']#should that come from the mep file?
+      activation variables: #will check if x is in [0,1]
+        file:
+          path: /tmp/hh_nostim.gen.dat
+          columns: [0, 2, 3, 4]#time, act var 0, ..., act var n
+          header: 1
+        names: ['m_Na', 'h_Na', 'n_K']#should that come from the mep file?
       
 
       
