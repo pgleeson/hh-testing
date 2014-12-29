@@ -5,8 +5,8 @@ env:
     - OMV_ENGINE=jNeuroML
     - OMV_ENGINE=NEURON
     - OMV_ENGINE=genesis
-before install: 
-    - pip install git+https://github.com/borismarin/osb-model-validation.git@conda
+before_install: 
+    - pip install git+https://github.com/OpenSourceBrain/osb-model-validation.git@conda
 install:
     - eval $(omv travis-conda-setup)
 script:
