@@ -6,6 +6,6 @@ env:
     - OMV_ENGINE=NEURON
     - OMV_ENGINE=genesis
 install:
-    - eval $(wget -qO - https://raw.githubusercontent.com/OpenSourceBrain/osb-model-validation/71ce4117c0017dfe1315876a0c448e1543aff4f8/utilities/travis-conda-setup.sh)  
+    - eval $(wget -qO- https://raw.githubusercontent.com/OpenSourceBrain/osb-model-validation/71ce4117c0017dfe1315876a0c448e1543aff4f8/utilities/travis-conda-setup.sh)  
 script:
     - omv all
